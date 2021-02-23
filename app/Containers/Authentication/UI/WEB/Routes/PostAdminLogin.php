@@ -1,5 +1,6 @@
 <?php
 
+/** @var Route $router */
 $router->post('/login', [
     'as'   => 'post_admin_login_form',
     'uses' => 'Controller@loginAdmin',

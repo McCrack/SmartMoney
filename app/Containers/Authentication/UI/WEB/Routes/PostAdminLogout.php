@@ -1,5 +1,6 @@
 <?php
 
+/** @var Route $router */
 $router->post('/logout', [
     'as'   => 'post_admin_logout_form',
     'uses' => 'Controller@logoutAdmin',

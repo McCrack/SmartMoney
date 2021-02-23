@@ -1,5 +1,6 @@
 <?php
 
+/** @var Route $router */
 $router->get('/login', [
     'as'   => 'get_admin_login_page',
     'uses' => 'Controller@showLoginPage',
