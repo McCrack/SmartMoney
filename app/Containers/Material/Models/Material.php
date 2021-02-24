@@ -7,7 +7,10 @@ use App\Ship\Parents\Models\Model;
 class Material extends Model
 {
     protected $fillable = [
-
+      'name',
+      'language',
+      'category',
+      'content',
     ];
 
     protected $attributes = [

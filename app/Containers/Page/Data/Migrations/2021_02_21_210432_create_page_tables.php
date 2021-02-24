@@ -14,10 +14,12 @@ class CreatePageTables extends Migration
         Schema::create('pages', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->unsignedBigInteger('parent_id');
-            $table->unsignedSmallInteger('sort_id')
-              ->index()
-              ->default(1);
+            $table->unsignedInteger('parent_id');
+            $table->unsignedInteger('left_key');
+            $table->unsignedInteger('right_key');
+            //$table->unsignedSmallInteger('sort_id')
+            //  ->index()
+            //  ->default(1);
             $table->string('name', 128);
             $table->string('slug', 128);
             $table->char('language', 2)->default('en');

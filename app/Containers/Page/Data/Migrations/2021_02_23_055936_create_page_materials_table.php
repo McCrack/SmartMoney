@@ -13,8 +13,8 @@ class CreatePageMaterialsTable extends Migration
     {
         Schema::create('page_materials', function (Blueprint $table) {
 
-            $table->unsignedBigInteger('page_id');
-            $table->unsignedBigInteger('material_id');
+            $table->unsignedInteger('page_id');
+            $table->unsignedInteger('material_id');
 
             $table->foreign('page_id')
               ->references('id')

@@ -4,10 +4,14 @@ namespace App\Containers\Imageset\Models;
 
 use App\Ship\Parents\Models\Model;
 
+
 class Imageset extends Model
 {
     protected $fillable = [
-
+      'name',
+      'language',
+      'category',
+      'content',
     ];
 
     protected $attributes = [
@@ -19,7 +23,7 @@ class Imageset extends Model
     ];
 
     protected $casts = [
-
+      'content' => 'array'
     ];
 
     protected $dates = [

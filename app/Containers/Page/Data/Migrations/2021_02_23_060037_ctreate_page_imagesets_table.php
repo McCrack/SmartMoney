@@ -13,8 +13,8 @@ class CtreatePageImagesetsTable extends Migration
     {
         Schema::create('page_imagesets', function (Blueprint $table) {
 
-            $table->unsignedBigInteger('page_id');
-            $table->unsignedBigInteger('imageset_id');
+            $table->unsignedInteger('page_id');
+            $table->unsignedInteger('imageset_id');
 
             $table->foreign('page_id')
               ->references('id')
