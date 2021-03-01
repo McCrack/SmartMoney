@@ -2,6 +2,9 @@
 
 namespace App\Containers\Page\UI\WEB\Controllers;
 
+use Apiato\Core\Foundation\Facades\Apiato;
+use App\Containers\Page\Actions\PreparePageAction;
+use App\Containers\Page\Models\Page;
 use App\Ship\Parents\Controllers\WebController;
 
 /**
@@ -11,14 +14,22 @@ use App\Ship\Parents\Controllers\WebController;
  */
 class Controller extends WebController
 {
+    /**
+     * Home Page
+     */
+    public function home()
+    {
+        $page = Page::whereSlug('home')->first();
+        return $this->show($page);
+    }
 
     /**
-     * @return  string
+     * @param Page $page
      */
-    public function sayWelcome()
+    public function show(Page $page)
     {
-        // No actions to call. Since there's nothing to do but returning a response.
+        $prepared = Apiato::call(PreparePageAction::class, [$page]);
 
-        return view('page::welcome-page');
+        return view("page::layouts.{$prepared['template']}", $prepared);
     }
 }

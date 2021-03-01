@@ -11,7 +11,7 @@ class CreatePageMaterialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('page_materials', function (Blueprint $table) {
+        Schema::create('page_material', function (Blueprint $table) {
 
             $table->unsignedInteger('page_id');
             $table->unsignedInteger('material_id');

@@ -11,7 +11,7 @@ class CtreatePageImagesetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('page_imagesets', function (Blueprint $table) {
+        Schema::create('page_imageset', function (Blueprint $table) {
 
             $table->unsignedInteger('page_id');
             $table->unsignedInteger('imageset_id');

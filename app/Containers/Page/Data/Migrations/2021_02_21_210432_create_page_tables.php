@@ -14,12 +14,10 @@ class CreatePageTables extends Migration
         Schema::create('pages', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->unsignedInteger('parent_id');
-            $table->unsignedInteger('left_key');
-            $table->unsignedInteger('right_key');
-            //$table->unsignedSmallInteger('sort_id')
-            //  ->index()
-            //  ->default(1);
+            $table->unsignedInteger('parent_id')->nullable();
+            $table->unsignedSmallInteger('sort_id')
+              ->index()
+              ->default(1);
             $table->string('name', 128);
             $table->string('slug', 128);
             $table->char('language', 2)->default('en');
@@ -31,8 +29,10 @@ class CreatePageTables extends Migration
               ->nullable();
             $table->string('preview', 128)
               ->nullable();
-            $table->json('specifics')
+            $table->string('template', 32)
               ->nullable();
+            $table->json('specifics')
+                ->nullable();
             $table->boolean('published')
               ->default(false);
             $table->timestamps();
@@ -44,7 +44,6 @@ class CreatePageTables extends Migration
               ->on('pages')
               ->onDelete('cascade')
               ->onUpdate('cascade');
-
         });
     }
 

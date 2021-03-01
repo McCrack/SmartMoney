@@ -81,6 +81,22 @@ return [
     */
 
     'locale' => 'en',
+    'language' => 'en',
+
+    'locales' => [
+        'en' => [
+            'default_language' => 'en',
+            'languages' => ['en'],
+        ],
+        'ua' => [
+            'default_language' => 'uk',
+            'languages' => ['uk','ru'],
+        ],
+        'ru' => [
+            'default_language' => 'ru',
+            'languages' => ['ru'],
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------

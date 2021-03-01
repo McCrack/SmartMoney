@@ -103,7 +103,6 @@ class LocalizationMiddleware extends Middleware
          * if the header is missing, use the default local language
          */
         $language = Config::get('app.locale');
-
         if ($request->hasHeader('Accept-Language')) {
             $language = $request->header('Accept-Language');
         }

@@ -12,12 +12,13 @@
   "devDependencies": {
     "apidoc": "^0.19.1",
     "apidoc-swagger": "^0.3.2",
-    "axios": "^0.19",
+    "axios": "^0.21.1",
     "cross-env": "^5.1",
-    "laravel-mix": "^4.0.7",
+    "laravel-mix": "^6.0.13",
     "lodash": "^4.17.13",
-    "resolve-url-loader": "^2.3.1",
+    "resolve-url-loader": "^3.1.2",
     "sass": "^1.15.2",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "tailwindcss": "^2.0.3"
   }
 }

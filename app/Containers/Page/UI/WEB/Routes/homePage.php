@@ -2,6 +2,6 @@
 
 /** @var Route $router */
 $router->get('/', [
-    'as'   => 'get_main_home_page',
-    'uses' => 'Controller@sayWelcome',
+    'as'   => 'get_home_page',
+    'uses' => 'Controller@home',
 ]);

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factory;
 $factory->define(Material::class, function (Faker $faker) {
   return [
     'name' => $faker->sentence(3),
-    'category' => "test",
+    'category' => "pages",
     'language' => "en",
     'content' => $faker->text(300),
   ];

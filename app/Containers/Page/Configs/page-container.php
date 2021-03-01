@@ -10,5 +10,9 @@ return [
     |
     |
     */
-
+    'languages' => [
+        'en',
+        'ua',
+        'ru',
+    ],
 ];
